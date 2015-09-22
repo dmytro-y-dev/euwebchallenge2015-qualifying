@@ -1,0 +1,33 @@
+Write REST API (based on all good practices) for job server responsible for 
+downloading images from given URL.
+
+1.1.  Task details: 
+(1)  Write client to your API 
+(2)  Write simple demo application and use your API client 
+(3)  Write/generate API documentation 
+(4)  API should allow to: 
+•  create jobs by submit URL to single web page, every job should has 
+unique identifier 
+•  retrieve current status of the job, 
+•  retrieve results of the job, as a list of downloaded images, with details of 
+every image (links to remote and local file path, width, height, size, 
+content-type).
+
+1.2.  Requirements: 
+(1)  all jobs execution should be done outside webserver, in separated background 
+job(s), your API should responds quickly, 
+(2)  during job execution, all images found on web page should be downloaded to 
+your storage system, 
+(3)  your API should be ready to store millions of images locally, but you can 
+propose solutions to distribute images and jobs between multiple servers.
+
+You can use your favourite framework.
+For REST API implementation, you can choose between JSON or XML formats, you can also support both of them.
+For searching images in HTML page you can use external library. You don't have to search for images embedded in CSS stylesheets, IMG tags are enough.
+For jobs queueing you can use external message queueing server (e.g. RabbitMQ), you can also develop your own simple solution. All methods are equal.
+Delivered application should be ready to open with Vagrant 1.6.0 (or higher) without additional plugins. Use https://github.com/stanma/vagrant as a Vagrantfile example to provision your environment.
+
+All job executions should be done in separated processes
+Please download only images available directly via HTTP.
+
+For most of pages, parsing and downloading images will be time-consuming task. When you submit URL of web page to you API, no HTML parsing or images downloading should be done in this specific request. All processing should be done in background, outside the webserver. In this case, your API should accept job, write somewhere (for further execution in background) and respond. 

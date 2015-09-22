@@ -1,0 +1,545 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="googlebot" content="NOODP" /><meta name="google-site-verification" content="nSYeDgyKM9mw5CWcZuD0xu7iSWXlJijAlg9rcxVOYf4" /><meta name="google-site-verification" content="6UEaC3SWhpGQvqRnSJIEm2swxXpM5Adn4dxZhFsNdw0" /><link rel="stylesheet" href="/css/rabbit.css" type="text/css" /><!--[if IE 6]>
+      <link rel="stylesheet" href="/css/rabbit-ie6.css" type="text/css" />
+      <![endif]--><link rel="icon" type="/image/vnd.microsoft.icon" href="/favicon.ico" /><link rel="stylesheet" href="/css/tutorial.css" type="text/css" /><script type="text/javascript" src="/js/site.js"></script><script type="text/javascript" src="/js/ga-bootstrap.js"></script><title>RabbitMQ - RabbitMQ tutorial - Work Queues </title>
+    
+  </head>
+  <body><div id="outerContainer"><div id="rabbit-logo"><a href="/"><img src="/img/rabbitmq_logo_strap.png" alt="RabbitMQ" width="253" height="53" /></a></div><div id="pivotal-logo"><a href="http://pivotal.io/"><img src="/img/logo-pivotal-118x25.png" alt="Pivotal" width="118" height="25" /></a></div><div id="nav-search"><div id="search-box"><form action="/search.html" method="get"><input type="text" name="q" size="25" id="search-query" value="Search RabbitMQ" onfocus="handle_SearchBoxFocus();" onblur="handle_SearchBoxBlur();" /><input type="submit" id="search-button" alt="Search" value="" /></form></div><ul class="mainNav"><li><a href="/features.html">Features</a></li><li><a href="/download.html">Installation</a></li><li><a href="/documentation.html">Docs</a></li><li><a href="/getstarted.html" class="selected">Tutorials</a></li><li><a href="/services.html">Support</a></li><li><a href="/community.html">Community</a></li><li><a href="https://groups.google.com/forum/#!msg/rabbitmq-users/UuvnsOV7yS4/14b8pHcs8I0J">We're Hiring</a></li><li><a href="/blog/">Blog</a></li></ul></div><div class="nav-separator"></div>
+<div id="sidebar" class="tutorial-two">
+   <ul id="tutorials" xml:base="site/tutorials/tutorials-menu.xml.inc">
+
+        <li id="tutorial-one">
+          <h2><span class="tute-num">1</span> <a href="/tutorials/tutorial-one-python.html">"Hello World!"</a></h2>
+          <p>
+            The simplest thing that does <em>something</em>
+          </p>
+          <p><img src="/img/tutorials/python-one.png" width="180" /></p>
+          <p>
+          <a href="/tutorials/tutorial-one-python.html">Python</a>
+          |
+          <a href="/tutorials/tutorial-one-java.html">Java</a>
+          |
+          <a href="/tutorials/tutorial-one-ruby.html">Ruby</a>
+          |
+          <a href="/tutorials/tutorial-one-php.html">PHP</a>
+          |
+          <a href="/tutorials/tutorial-one-dotnet.html">C#</a>
+          |
+          <a href="/tutorials/tutorial-one-javascript.html">Javascript</a>
+          |
+          <a href="/tutorials/tutorial-one-go.html">Go</a>
+          </p>
+        </li>
+
+        <li id="tutorial-two">
+          <h2><span class="tute-num">2</span> <a href="/tutorials/tutorial-two-python.html">Work queues</a></h2>
+          <p>
+            Distributing tasks among workers
+          </p>
+          <p><img src="/img/tutorials/python-two.png" height="50" width="180" /></p>
+          <p>
+          <a href="/tutorials/tutorial-two-python.html">Python</a>
+          |
+          <a href="/tutorials/tutorial-two-java.html">Java</a>
+          |
+          <a href="/tutorials/tutorial-two-ruby.html">Ruby</a>
+          |
+          <a href="/tutorials/tutorial-two-php.html">PHP</a>
+          |
+          <a href="/tutorials/tutorial-two-dotnet.html">C#</a>
+          |
+          <a href="/tutorials/tutorial-two-javascript.html">Javascript</a>
+          |
+          <a href="/tutorials/tutorial-two-go.html">Go</a>
+          </p>
+        </li>
+
+        <li id="tutorial-three">
+          <h2><span class="tute-num">3</span> <a href="/tutorials/tutorial-three-python.html">Publish/Subscribe</a></h2>
+          <p>
+            Sending messages to many consumers at once
+          </p>
+          <p><img src="/img/tutorials/python-three.png" height="50" width="180" /></p>
+          <p>
+          <a href="/tutorials/tutorial-three-python.html">Python</a>
+          |
+          <a href="/tutorials/tutorial-three-java.html">Java</a>
+          |
+          <a href="/tutorials/tutorial-three-ruby.html">Ruby</a>
+          |
+          <a href="/tutorials/tutorial-three-php.html">PHP</a>
+          |
+          <a href="/tutorials/tutorial-three-dotnet.html">C#</a>
+          |
+          <a href="/tutorials/tutorial-three-javascript.html">Javascript</a>
+          |
+          <a href="/tutorials/tutorial-three-go.html">Go</a>
+          </p>
+        </li>
+
+        <li id="tutorial-four">
+          <h2><span class="tute-num">4</span> <a href="/tutorials/tutorial-four-python.html">Routing</a></h2>
+          <p>
+            Receiving messages selectively
+          </p>
+          <p><img src="/img/tutorials/python-four.png" height="50" width="180" /></p>
+          <p>
+          <a href="/tutorials/tutorial-four-python.html">Python</a>
+          |
+          <a href="/tutorials/tutorial-four-java.html">Java</a>
+          |
+          <a href="/tutorials/tutorial-four-ruby.html">Ruby</a>
+          |
+          <a href="/tutorials/tutorial-four-php.html">PHP</a>
+          |
+          <a href="/tutorials/tutorial-four-dotnet.html">C#</a>
+          |
+          <a href="/tutorials/tutorial-four-javascript.html">Javascript</a>
+          |
+          <a href="/tutorials/tutorial-four-go.html">Go</a>
+          </p>
+        </li>
+
+        <li id="tutorial-five">
+          <h2><span class="tute-num">5</span> <a href="/tutorials/tutorial-five-python.html">Topics</a></h2>
+          <p>
+            Receiving messages based on a pattern
+          </p>
+          <p><img src="/img/tutorials/python-five.png" height="50" width="180" /></p>
+          <p>
+          <a href="/tutorials/tutorial-five-python.html">Python</a>
+          |
+          <a href="/tutorials/tutorial-five-java.html">Java</a>
+          |
+          <a href="/tutorials/tutorial-five-ruby.html">Ruby</a>
+          |
+          <a href="/tutorials/tutorial-five-php.html">PHP</a>
+          |
+          <a href="/tutorials/tutorial-five-dotnet.html">C#</a>
+          |
+          <a href="/tutorials/tutorial-five-javascript.html">Javascript</a>
+          |
+          <a href="/tutorials/tutorial-five-go.html">Go</a>
+          </p>
+        </li>
+
+        <li id="tutorial-six">
+          <h2><span class="tute-num">6</span> <a href="/tutorials/tutorial-six-python.html">RPC</a></h2>
+          <p>
+            Remote procedure call implementation
+          </p>
+          <p><img src="/img/tutorials/python-six.png" height="50" width="180" /></p>
+          <p>
+          <a href="/tutorials/tutorial-six-python.html">Python</a>
+          |
+          <a href="/tutorials/tutorial-six-java.html">Java</a>
+          |
+          <a href="/tutorials/tutorial-six-ruby.html">Ruby</a>
+          |
+          <a href="/tutorials/tutorial-six-php.html">PHP</a>
+          |
+          <a href="/tutorials/tutorial-six-dotnet.html">C#</a>
+          |
+          <a href="/tutorials/tutorial-six-javascript.html">Javascript</a>
+          |
+          <a href="/tutorials/tutorial-six-go.html">Go</a>
+          </p>
+        </li>
+      </ul>
+</div>
+
+<div id="tutorial">
+
+<h2>Work Queues</h2>
+<h3>(using the pika 0.9.8 Python client)</h3>
+<p><div class="aside" xml:base="site/tutorials/tutorials-help.xml.inc">
+    <h3>Prerequisites</h3>
+    <p>
+      This tutorial assumes RabbitMQ is <a href="/download.html">installed</a> and running
+      on <span class="code ">localhost</span> on standard port (<span class="code ">5672</span>). In case you use
+      a different host, port or credentials, connections settings would require adjusting.
+    </p>
+
+    <h3>Where to get help</h3>
+    <p>
+        If you're having trouble going through this tutorial you can
+        <a href="https://groups.google.com/forum/#!forum/rabbitmq-users">contact us</a> through the mailing list.
+    </p>
+  </div></p>
+<div class="diagram">
+  <img src="/img/tutorials/python-two.png" height="110" />
+  <div class="diagram_source">
+    digraph {
+      bgcolor=transparent;
+      truecolor=true;
+      rankdir=LR;
+      node [style="filled"];
+      //
+      P1 [label="P", fillcolor="#00ffff"];
+      Q1 [label="{||||}", fillcolor="red", shape="record"];
+      C1 [label=&lt;C&lt;font point-size="7"&gt;1&lt;/font&gt;&gt;, fillcolor="#33ccff"];
+      C2 [label=&lt;C&lt;font point-size="7"&gt;2&lt;/font&gt;&gt;, fillcolor="#33ccff"];
+      //
+      P1 -&gt; Q1 -&gt; C1;
+      Q1 -&gt; C2;
+    }
+  </div>
+</div>
+
+<p>In the <a href="tutorial-one-python.html">first tutorial</a> we
+wrote programs to send and receive messages from a named queue. In this
+one we'll create a <em>Work Queue</em> that will be used to distribute
+time-consuming tasks among multiple workers.</p>
+<p>The main idea behind Work Queues (aka: <em>Task Queues</em>) is to avoid
+doing a resource-intensive task immediately and having to wait for
+it to complete. Instead we schedule the task to be done later. We encapsulate a
+<em>task</em> as a message and send it to the queue. A worker process running
+in the background will pop the tasks and eventually execute the
+job. When you run many workers the tasks will be shared between them.</p>
+<p>This concept is especially useful in web applications where it's
+impossible to handle a complex task during a short HTTP request
+window.</p>
+<h2>Preparation</h2>
+<p>In the previous part of this tutorial we sent a message containing
+"Hello World!". Now we'll be sending strings that stand for complex
+tasks. We don't have a real-world task, like images to be resized or
+pdf files to be rendered, so let's fake it by just pretending we're
+busy - by using the <span class="code ">time.sleep()</span> function. We'll take the number of dots
+in the string as its complexity; every dot will account for one second
+of "work".  For example, a fake task described by <span class="code ">Hello...</span>
+will take three seconds.</p>
+<p>We will slightly modify the <em>send.py</em> code from our previous example,
+to allow arbitrary messages to be sent from the command line. This
+program will schedule tasks to our work queue, so let's name it
+<span class="code ">new_task.py</span>:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">message</span> <span class="o">=</span> <span class="s">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="ow">or</span> <span class="s">"Hello World!"</span>
+<span class="n">channel</span><span class="o">.</span><span class="n">basic_publish</span><span class="p">(</span><span class="n">exchange</span><span class="o">=</span><span class="s">''</span><span class="p">,</span>
+                      <span class="n">routing_key</span><span class="o">=</span><span class="s">'hello'</span><span class="p">,</span>
+                      <span class="n">body</span><span class="o">=</span><span class="n">message</span><span class="p">)</span>
+<span class="k">print</span> <span class="s">" [x] Sent </span><span class="si">%r</span><span class="s">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">message</span><span class="p">,)</span>
+</pre></div>
+
+
+<p>Our old <em>receive.py</em> script also requires some changes: it needs to
+fake a second of work for every dot in the message body. It will pop
+messages from the queue and perform the task, so let's call it <span class="code ">worker.py</span>:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">properties</span><span class="p">,</span> <span class="n">body</span><span class="p">):</span>
+    <span class="k">print</span> <span class="s">" [x] Received </span><span class="si">%r</span><span class="s">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">body</span><span class="p">,)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span> <span class="n">body</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'.'</span><span class="p">)</span> <span class="p">)</span>
+    <span class="k">print</span> <span class="s">" [x] Done"</span>
+</pre></div>
+
+
+<h2>Round-robin dispatching</h2>
+<p>One of the advantages of using a Task Queue is the ability to easily
+parallelise work. If we are building up a backlog of work, we can just
+add more workers and that way, scale easily.</p>
+<p>First, let's try to run two <span class="code ">worker.py</span> scripts at the same time. They
+will both get messages from the queue, but how exactly? Let's see.</p>
+<p>You need three consoles open. Two will run the <span class="code ">worker.py</span>
+script. These consoles will be our two consumers - C1 and C2.</p>
+<div class="highlight"><pre>shell1<span class="nv">$ </span>python worker.py
+ <span class="o">[</span>*<span class="o">]</span> Waiting <span class="k">for </span>messages. To <span class="nb">exit </span>press CTRL+C
+</pre></div>
+
+
+<div></div>
+
+<div class="highlight"><pre>shell2<span class="nv">$ </span>python worker.py
+ <span class="o">[</span>*<span class="o">]</span> Waiting <span class="k">for </span>messages. To <span class="nb">exit </span>press CTRL+C
+</pre></div>
+
+
+<p>In the third one we'll publish new tasks. Once you've started
+the consumers you can publish a few messages:</p>
+<div class="highlight"><pre>shell3<span class="nv">$ </span>python new_task.py First message.
+shell3<span class="nv">$ </span>python new_task.py Second message..
+shell3<span class="nv">$ </span>python new_task.py Third message...
+shell3<span class="nv">$ </span>python new_task.py Fourth message....
+shell3<span class="nv">$ </span>python new_task.py Fifth message.....
+</pre></div>
+
+
+<p>Let's see what is delivered to our workers:</p>
+<div class="highlight"><pre>shell1<span class="nv">$ </span>python worker.py
+ <span class="o">[</span>*<span class="o">]</span> Waiting <span class="k">for </span>messages. To <span class="nb">exit </span>press CTRL+C
+ <span class="o">[</span>x<span class="o">]</span> Received <span class="s1">'First message.'</span>
+ <span class="o">[</span>x<span class="o">]</span> Received <span class="s1">'Third message...'</span>
+ <span class="o">[</span>x<span class="o">]</span> Received <span class="s1">'Fifth message.....'</span>
+</pre></div>
+
+
+<div></div>
+
+<div class="highlight"><pre>shell2<span class="nv">$ </span>python worker.py
+ <span class="o">[</span>*<span class="o">]</span> Waiting <span class="k">for </span>messages. To <span class="nb">exit </span>press CTRL+C
+ <span class="o">[</span>x<span class="o">]</span> Received <span class="s1">'Second message..'</span>
+ <span class="o">[</span>x<span class="o">]</span> Received <span class="s1">'Fourth message....'</span>
+</pre></div>
+
+
+<p>By default, RabbitMQ will send each message to the next consumer,
+in sequence. On average every consumer will get the same number of
+messages. This way of distributing messages is called round-robin. Try
+this out with three or more workers.</p>
+<h2>Message acknowledgment</h2>
+<p>Doing a task can take a few seconds. You may wonder what happens if
+one of the consumers starts a long task and dies with it only partly done.
+With our current code once RabbitMQ delivers message to the customer it
+immediately removes it from memory. In this case, if you kill a worker
+we will lose the message it was just processing. We'll also lose all
+the messages that were dispatched to this particular worker but were not
+yet handled.</p>
+<p>But we don't want to lose any tasks. If a worker dies, we'd like the
+task to be delivered to another worker.</p>
+<p>In order to make sure a message is never lost, RabbitMQ supports
+message <em>acknowledgments</em>. An ack(nowledgement) is sent back from the
+consumer to tell RabbitMQ that a particular message had been received,
+processed and that RabbitMQ is free to delete it.</p>
+<p>If consumer dies without sending an ack, RabbitMQ will understand that a
+message wasn't processed fully and will redeliver it to another
+consumer. That way you can be sure that no message is lost, even if
+the workers occasionally die.</p>
+<p>There aren't any message timeouts; RabbitMQ will redeliver the message
+only when the worker connection dies. It's fine even if processing a
+message takes a very, very long time.</p>
+<p>Message acknowledgments are turned on by default. In previous
+examples we explicitly turned them off via the <span class="code ">no_ack=True</span>
+flag. It's time to remove this flag and send a proper acknowledgment
+from the worker, once we're done with a task.</p>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">properties</span><span class="p">,</span> <span class="n">body</span><span class="p">):</span>
+    <span class="k">print</span> <span class="s">" [x] Received </span><span class="si">%r</span><span class="s">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">body</span><span class="p">,)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span> <span class="n">body</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'.'</span><span class="p">)</span> <span class="p">)</span>
+    <span class="k">print</span> <span class="s">" [x] Done"</span>
+    <span class="n">ch</span><span class="o">.</span><span class="n">basic_ack</span><span class="p">(</span><span class="n">delivery_tag</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">delivery_tag</span><span class="p">)</span>
+
+<span class="n">channel</span><span class="o">.</span><span class="n">basic_consume</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span>
+                      <span class="n">queue</span><span class="o">=</span><span class="s">'hello'</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Using this code we can be sure that even if you kill a worker using
+CTRL+C while it was processing a message, nothing will be lost. Soon
+after the worker dies all unacknowledged messages will be redelivered.</p>
+<blockquote>
+<h4>Forgotten acknowledgment</h4>
+<p>It's a common mistake to miss the <span class="code ">basic_ack</span>. It's an easy error,
+but the consequences are serious. Messages will be redelivered
+when your client quits (which may look like random redelivery), but
+RabbitMQ will eat more and more memory as it won't be able to release
+any unacked messages.</p>
+<p>In order to debug this kind of mistake you can use <span class="code ">rabbitmqctl</span>
+to print the <span class="code ">messages_unacknowledged</span> field:</p>
+<div class="highlight"><pre><span class="nv">$ </span>sudo rabbitmqctl list_queues name messages_ready messages_unacknowledged
+Listing queues ...
+hello    0       0
+...done.
+</pre></div>
+
+
+</blockquote>
+<h2>Message durability</h2>
+<p>We have learned how to make sure that even if the consumer dies, the
+task isn't lost. But our tasks will still be lost if RabbitMQ server
+stops.</p>
+<p>When RabbitMQ quits or crashes it will forget the queues and messages
+unless you tell it not to. Two things are required to make sure that
+messages aren't lost: we need to mark both the queue and messages as
+durable.</p>
+<p>First, we need to make sure that RabbitMQ will never lose our
+queue. In order to do so, we need to declare it as <em>durable</em>:</p>
+<div class="highlight"><pre><span class="n">channel</span><span class="o">.</span><span class="n">queue_declare</span><span class="p">(</span><span class="n">queue</span><span class="o">=</span><span class="s">'hello'</span><span class="p">,</span> <span class="n">durable</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Although this command is correct by itself, it won't work in our
+setup. That's because we've already defined a queue called <span class="code ">hello</span>
+which is not durable. RabbitMQ doesn't allow you to redefine an existing queue
+with different parameters and will return an error to any program
+that tries to do that. But there is a quick workaround - let's declare
+a queue with different name, for example <span class="code ">task_queue</span>:</p>
+<div class="highlight"><pre><span class="n">channel</span><span class="o">.</span><span class="n">queue_declare</span><span class="p">(</span><span class="n">queue</span><span class="o">=</span><span class="s">'task_queue'</span><span class="p">,</span> <span class="n">durable</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+
+<p>This <span class="code ">queue_declare</span> change needs to be applied to both the producer
+and consumer code.</p>
+<p>At that point we're sure that the <span class="code ">task_queue</span> queue won't be lost
+even if RabbitMQ restarts. Now we need to mark our messages as persistent
+- by supplying a <span class="code ">delivery_mode</span> property with a value <span class="code ">2</span>.</p>
+<div class="highlight"><pre><span class="n">channel</span><span class="o">.</span><span class="n">basic_publish</span><span class="p">(</span><span class="n">exchange</span><span class="o">=</span><span class="s">''</span><span class="p">,</span>
+                      <span class="n">routing_key</span><span class="o">=</span><span class="s">"task_queue"</span><span class="p">,</span>
+                      <span class="n">body</span><span class="o">=</span><span class="n">message</span><span class="p">,</span>
+                      <span class="n">properties</span><span class="o">=</span><span class="n">pika</span><span class="o">.</span><span class="n">BasicProperties</span><span class="p">(</span>
+                         <span class="n">delivery_mode</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="c"># make message persistent</span>
+                      <span class="p">))</span>
+</pre></div>
+
+
+<blockquote>
+<h4>Note on message persistence</h4>
+<p>Marking messages as persistent doesn't fully guarantee that a message
+won't be lost. Although it tells RabbitMQ to save the message to disk,
+there is still a short time window when RabbitMQ has accepted a message and
+hasn't saved it yet. Also, RabbitMQ doesn't do <span class="code ">fsync(2)</span> for every
+message -- it may be just saved to cache and not really written to the
+disk. The persistence guarantees aren't strong, but it's more than enough
+for our simple task queue. If you need a stronger guarantee then you can use
+<a href="https://www.rabbitmq.com/confirms.html">publisher confirms</a>.</p>
+</blockquote>
+<h2>Fair dispatch</h2>
+<p>You might have noticed that the dispatching still doesn't work exactly
+as we want. For example in a situation with two workers, when all
+odd messages are heavy and even messages are light, one worker will be
+constantly busy and the other one will do hardly any work. Well,
+RabbitMQ doesn't know anything about that and will still dispatch
+messages evenly.</p>
+<p>This happens because RabbitMQ just dispatches a message when the message
+enters the queue. It doesn't look at the number of unacknowledged
+messages for a consumer. It just blindly dispatches every n-th message
+to the n-th consumer.</p>
+<div class="diagram">
+  <img src="/img/tutorials/prefetch-count.png" height="110" />
+  <div class="diagram_source">
+    digraph {
+      bgcolor=transparent;
+      truecolor=true;
+      rankdir=LR;
+      node [style="filled"];
+      //
+      P1 [label="P", fillcolor="#00ffff"];
+      subgraph cluster_Q1 {
+        label="queue_name=hello";
+    color=transparent;
+        Q1 [label="{||||}", fillcolor="red", shape="record"];
+      };
+      C1 [label=&lt;C&lt;font point-size="7"&gt;1&lt;/font&gt;&gt;, fillcolor="#33ccff"];
+      C2 [label=&lt;C&lt;font point-size="7"&gt;2&lt;/font&gt;&gt;, fillcolor="#33ccff"];
+      //
+      P1 -&gt; Q1;
+      Q1 -&gt; C1 [label="prefetch=1"] ;
+      Q1 -&gt; C2 [label="prefetch=1"] ;
+    }
+  </div>
+</div>
+
+<p>In order to defeat that we can use the <span class="code ">basic.qos</span> method with the
+<span class="code ">prefetch_count=1</span> setting. This tells RabbitMQ not to give more than
+one message to a worker at a time. Or, in other words, don't dispatch
+a new message to a worker until it has processed and acknowledged the
+previous one. Instead, it will dispatch it to the next worker that is not still busy.</p>
+<div class="highlight"><pre><span class="n">channel</span><span class="o">.</span><span class="n">basic_qos</span><span class="p">(</span><span class="n">prefetch_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+
+<blockquote>
+<h4>Note about queue size</h4>
+<p>If all the workers are busy, your queue can fill up. You will want to keep an
+eye on that, and maybe add more workers, or have some other strategy.</p>
+</blockquote>
+<h2>Putting it all together</h2>
+<p>Final code of our <span class="code ">new_task.py</span> script:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<span class="kn">import</span> <span class="nn">pika</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">connection</span> <span class="o">=</span> <span class="n">pika</span><span class="o">.</span><span class="n">BlockingConnection</span><span class="p">(</span><span class="n">pika</span><span class="o">.</span><span class="n">ConnectionParameters</span><span class="p">(</span>
+        <span class="n">host</span><span class="o">=</span><span class="s">'localhost'</span><span class="p">))</span>
+<span class="n">channel</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">channel</span><span class="p">()</span>
+
+<span class="n">channel</span><span class="o">.</span><span class="n">queue_declare</span><span class="p">(</span><span class="n">queue</span><span class="o">=</span><span class="s">'task_queue'</span><span class="p">,</span> <span class="n">durable</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">message</span> <span class="o">=</span> <span class="s">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="ow">or</span> <span class="s">"Hello World!"</span>
+<span class="n">channel</span><span class="o">.</span><span class="n">basic_publish</span><span class="p">(</span><span class="n">exchange</span><span class="o">=</span><span class="s">''</span><span class="p">,</span>
+                      <span class="n">routing_key</span><span class="o">=</span><span class="s">'task_queue'</span><span class="p">,</span>
+                      <span class="n">body</span><span class="o">=</span><span class="n">message</span><span class="p">,</span>
+                      <span class="n">properties</span><span class="o">=</span><span class="n">pika</span><span class="o">.</span><span class="n">BasicProperties</span><span class="p">(</span>
+                         <span class="n">delivery_mode</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="c"># make message persistent</span>
+                      <span class="p">))</span>
+<span class="k">print</span> <span class="s">" [x] Sent </span><span class="si">%r</span><span class="s">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">message</span><span class="p">,)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+
+<p><a href="http://github.com/rabbitmq/rabbitmq-tutorials/blob/master/python/new_task.py">(new_task.py source)</a></p>
+<p>And our worker:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<span class="kn">import</span> <span class="nn">pika</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">connection</span> <span class="o">=</span> <span class="n">pika</span><span class="o">.</span><span class="n">BlockingConnection</span><span class="p">(</span><span class="n">pika</span><span class="o">.</span><span class="n">ConnectionParameters</span><span class="p">(</span>
+        <span class="n">host</span><span class="o">=</span><span class="s">'localhost'</span><span class="p">))</span>
+<span class="n">channel</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">channel</span><span class="p">()</span>
+
+<span class="n">channel</span><span class="o">.</span><span class="n">queue_declare</span><span class="p">(</span><span class="n">queue</span><span class="o">=</span><span class="s">'task_queue'</span><span class="p">,</span> <span class="n">durable</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">print</span> <span class="s">' [*] Waiting for messages. To exit press CTRL+C'</span>
+
+<span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">properties</span><span class="p">,</span> <span class="n">body</span><span class="p">):</span>
+    <span class="k">print</span> <span class="s">" [x] Received </span><span class="si">%r</span><span class="s">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">body</span><span class="p">,)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span> <span class="n">body</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'.'</span><span class="p">)</span> <span class="p">)</span>
+    <span class="k">print</span> <span class="s">" [x] Done"</span>
+    <span class="n">ch</span><span class="o">.</span><span class="n">basic_ack</span><span class="p">(</span><span class="n">delivery_tag</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">delivery_tag</span><span class="p">)</span>
+
+<span class="n">channel</span><span class="o">.</span><span class="n">basic_qos</span><span class="p">(</span><span class="n">prefetch_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">channel</span><span class="o">.</span><span class="n">basic_consume</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span>
+                      <span class="n">queue</span><span class="o">=</span><span class="s">'task_queue'</span><span class="p">)</span>
+
+<span class="n">channel</span><span class="o">.</span><span class="n">start_consuming</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+
+<p><a href="http://github.com/rabbitmq/rabbitmq-tutorials/blob/master/python/worker.py">(worker.py source)</a></p>
+<p>Using message acknowledgments and <span class="code ">prefetch_count</span> you can set up a
+work queue. The durability options let the tasks survive even if
+RabbitMQ is restarted.</p>
+<p>Now we can move on to <a href="tutorial-three-python.html">tutorial 3</a> and learn how
+to deliver the same message to many consumers.</p></div><div class="clear"></div><div class="pageFooter"><p class="righter"><a href="/sitemap.html">Sitemap</a> |
+        <a href="/contact.html">Contact</a></p><p id="copyright">
+        Copyright © 2015 Pivotal Software, Inc. All rights reserved
+        | <a href="http://pivotal.io/privacy-policy">Privacy Policy</a>
+        | <a href="https://github.com/rabbitmq/rabbitmq-website/">This Site is Open Source</a>        
+        | <a href="https://groups.google.com/forum/#!msg/rabbitmq-users/UuvnsOV7yS4/14b8pHcs8I0J">We're Hiring</a></p></div></div></body>
+</html>
