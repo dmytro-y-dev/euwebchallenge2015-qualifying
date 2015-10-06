@@ -59,7 +59,7 @@ where <your_job_id> is unique job's id from `new-job.php` script (if you have ch
 How to test
 -----------
 
-Just `vendor/bin/phpunit`.
+Just run `vendor/bin/phpunit`.
 
 Architecture scheme
 -------------------
