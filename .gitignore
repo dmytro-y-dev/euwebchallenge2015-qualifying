@@ -1,3 +1,9 @@
+!.gitkeep
+
 vendor/*
-doxygen/
-storage/
+
+doxygen/*
+!doxygen/.gitkeep
+
+storage/*
+!storage/.gitkeep

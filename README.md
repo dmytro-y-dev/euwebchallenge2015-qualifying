@@ -1,4 +1,4 @@
-# REST API for job server responsible for downloading images from given URL.
+# REST API for job server responsible for downloading images from given URL
 
 Directories structure
 ---------------------
@@ -39,29 +39,31 @@ How to run
 
 1. Up Vagrant and change directory to project's root:
 
-`vagrant up`
-`vagrant ssh`
-`cd /vagrant`
+	`vagrant up`
+	
+	`vagrant ssh`
+	
+	`cd /vagrant`
 
 2. Start as many workers as you want:
 
-`php worker.php`
+	`php worker.php`
 
-Workers will be waiting for new jobs. After new jobs are arrived, RabbitMQ will send them to workers.
+	Workers will be waiting for new jobs. After new jobs are arrived, RabbitMQ will send them to workers.
 
-3. Start demo application (a)
+3. Start demo application (a):
 
-`php demo/SimpleClient.php`
+	`php demo/SimpleClient.php`
 
-or add new job with your own html address (b):
+	or add new job with your own html address (b):
 
-`curl http://localhost/new-job.php?htmlpage=http://www.google.com/`
+	`curl http://localhost/new-job.php?htmlpage=http://www.google.com/`
 
 4. Get work results with:
 
-`curl http://localhost/status.php?job_id=<your_job_id>`
+	`curl http://localhost/status.php?job_id=<your_job_id>`
 
-where <your_job_id> is unique job's id from `new-job.php` script (if you have chosen (2.b)).
+	where <your_job_id> is unique job's id from `new-job.php` script (if you have chosen (2.b)).
 
 5. Find results in `storage/` folder.
 
